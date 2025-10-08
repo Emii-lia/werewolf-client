@@ -1,0 +1,30 @@
+.StatusBadge {
+  @apply inline-block rounded-full aspect-square;
+  &.xs {
+    @apply w-0.5 h-0.5;
+  }
+  &.sm {
+    @apply w-1 h-1;
+  }
+  &.md {
+    @apply w-2 h-2;
+  }
+  &.lg {
+    @apply w-3 h-3;
+  }
+  &.xl {
+    @apply w-4 h-4;
+  }
+  &.online {
+    @apply bg-green-400;
+  }
+  &.offline {
+    @apply bg-red-500;
+  }
+  &.none {
+    @apply bg-slate-400;
+  }
+  &.idle {
+    @apply bg-amber-500;
+  }
+}

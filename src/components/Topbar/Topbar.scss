@@ -1,0 +1,53 @@
+.Topbar {
+  @apply w-full border-b bg-background;
+
+  .topbar-container {
+    @apply w-full px-8 h-16 flex items-center justify-between;
+
+    .topbar-brand {
+      @apply flex items-center gap-3;
+      .brand-logo {
+        @apply w-10 h-10 aspect-square bg-no-repeat bg-center bg-contain;
+        background-image: var(--logo);
+      }
+      .brand-title {
+        @apply text-2xl font-bold;
+        @apply max-sm:hidden;
+      }
+    }
+
+    .topbar-actions {
+      .user-menu-trigger {
+        @apply flex items-center gap-2;
+
+        .user-icon {
+          @apply h-4 w-4;
+        }
+
+        .username {
+          @apply hidden sm:inline;
+        }
+      }
+    }
+  }
+}
+
+.user-info {
+  @apply flex flex-col gap-1;
+
+  .user-name {
+    @apply font-medium;
+  }
+
+  .user-status {
+    @apply text-xs text-muted-foreground;
+  }
+}
+
+.logout-item {
+  @apply flex items-center gap-2 cursor-pointer;
+
+  .logout-icon {
+    @apply h-4 w-4;
+  }
+}

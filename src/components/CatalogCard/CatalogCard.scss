@@ -1,0 +1,13 @@
+.CatalogCard {
+  @apply w-full max-w-md;
+  .role-title {
+    @apply flex items-center justify-between gap-4 w-full;
+  }
+  .role-image {
+    @apply w-full h-auto aspect-[9/12] bg-no-repeat bg-center bg-cover rounded-lg;
+    background-image: var(--bg);
+  }
+  .card-content {
+    @apply flex flex-col gap-3;
+  }
+}

@@ -1,0 +1,6 @@
+.ErrorMessages {
+  @apply flex flex-col items-end gap-1;
+  .errors {
+    @apply text-red-600 text-xs mt-0;
+  }
+}

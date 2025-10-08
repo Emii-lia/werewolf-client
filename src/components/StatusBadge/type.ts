@@ -1,0 +1,1 @@
+export type StatusBadgeVariant = "online" | "offline" | "idle" | "none"
