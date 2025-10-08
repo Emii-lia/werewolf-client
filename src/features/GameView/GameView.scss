@@ -1,0 +1,75 @@
+.GameView {
+  @apply w-full h-full flex flex-col gap-6 p-6;
+
+  .game-header {
+    @apply flex justify-between items-center pb-4 border-b;
+    @apply max-sm:flex-col max-sm:items-start max-sm:gap-4;
+
+    .room-info {
+      @apply flex flex-col gap-1;
+
+      .room-name {
+        @apply text-2xl font-bold;
+      }
+
+      .game-status {
+        @apply text-sm text-muted-foreground;
+      }
+    }
+
+    .my-role-display {
+      @apply flex items-center gap-2;
+
+      .role-label {
+        @apply text-sm text-muted-foreground;
+      }
+
+      .role-badge {
+        @apply invisible;
+        &.showRole {
+          @apply visible;
+        }
+        &.beast {
+          @apply bg-red-500 text-white;
+        }
+
+        &.citizen {
+          @apply bg-blue-500 text-white;
+        }
+
+        &.neutral {
+          @apply bg-gray-500 text-white;
+        }
+      }
+      .help-btn {
+        @apply invisible;
+        &.showRole {
+          @apply visible;
+        }
+      }
+    }
+  }
+
+  .game-content {
+    @apply flex flex-col gap-6 flex-1;
+
+    .players-section {
+      @apply flex flex-col gap-4;
+
+      .section-title {
+        @apply text-lg font-semibold;
+      }
+
+      .players-grid {
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4;
+        .player-card {
+          @apply p-4 border border-slate-200 shadow-sm rounded-lg;
+        }
+      }
+    }
+
+    .game-actions {
+      @apply flex justify-end gap-2 pt-4 border-t;
+    }
+  }
+}

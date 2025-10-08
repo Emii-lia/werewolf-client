@@ -1,0 +1,23 @@
+.RoomView {
+  @apply w-screen h-full min-h-screen flex flex-col gap-8 px-12 py-8;
+  @apply max-md:px-8;
+  .view-header {
+    @apply w-full max-w-xl flex items-center justify-between gap-4;
+    .room-name {
+      @apply text-lg font-semibold text-slate-900;
+    }
+    .room-place {
+      @apply text-lg font-medium text-slate-500;
+    }
+  }
+  .room-players {
+    @apply w-full max-w-xl flex flex-col gap-3;
+    .players-title {
+      @apply text-sm font-medium text-slate-500;
+    }
+  }
+  .room-actions {
+    @apply flex items-center justify-end gap-2;
+    @apply max-md:flex-col-reverse max-md:items-stretch max-md:pt-8 max-md:gap-4;
+  }
+}

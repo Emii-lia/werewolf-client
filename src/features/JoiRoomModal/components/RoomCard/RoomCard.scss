@@ -1,0 +1,25 @@
+.RoomCard {
+  @apply w-full rounded-lg border-b border-b-slate-200 px-5 py-3 bg-white;
+  @apply border border-slate-100;
+  @apply border-l-4 border-l-slate-400 shadow-sm;
+  @apply hover:bg-slate-100;
+  @apply flex flex-col gap-4;
+  &:last-child {
+    @apply border-b-transparent;
+  }
+  .room-card-header {
+    @apply flex items-center justify-between gap-4;
+    .room-name {
+      @apply text-lg font-semibold text-slate-700;
+    }
+    .room-place-state {
+      @apply flex items-center gap-1.5;
+      .room-place {
+        @apply text-lg font-medium text-slate-400;
+      }
+    }
+  }
+  .room-players {
+    @apply flex items-center gap-2 flex-wrap;
+  }
+}

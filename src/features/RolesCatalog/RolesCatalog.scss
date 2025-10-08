@@ -1,0 +1,21 @@
+.RolesCatalog {
+  @apply w-full h-full flex flex-col gap-8 py-12 px-20;
+  @apply max-lg:p-10 max-md:p-6;
+  .catalog-title-btn {
+    @apply w-fit;
+  }
+  .catalog-title-icon {
+    @apply w-7 h-7 aspect-square;
+  }
+  .catalog-title {
+    @apply text-2xl font-semibold text-slate-700;
+  }
+  .role-list {
+    @apply w-full grid grid-cols-1 gap-4;
+    @apply sm:grid-cols-2 lg:grid-cols-4;
+  }
+  .no-roles {
+    @apply text-center text-slate-500 font-semibold;
+    @apply w-full h-screen flex flex-col items-center justify-center gap-8;
+  }
+}

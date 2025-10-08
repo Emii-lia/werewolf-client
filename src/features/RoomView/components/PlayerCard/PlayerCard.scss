@@ -1,0 +1,18 @@
+.PlayerCard {
+  @apply w-full flex items-center justify-between gap-4;
+  .player-info {
+    @apply flex flex-col gap-1 flex-1 min-w-0;
+    .player-name {
+      @apply text-slate-900 font-medium truncate;
+    }
+    .player-role {
+      @apply text-sm text-muted-foreground;
+    }
+  }
+  .player-status {
+    @apply flex items-center gap-3;
+  }
+  .trash-icon {
+    @apply text-red-500;
+  }
+}

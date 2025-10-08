@@ -1,0 +1,12 @@
+.JoinRoomModal {
+  @apply w-full;
+}
+.no-room {
+  @apply px-4 py-12 w-full text-center text-lg font-semibold text-slate-400;
+}
+.room-list {
+  @apply w-full flex flex-col gap-0;
+  .selected {
+    @apply bg-blue-100;
+  }
+}
