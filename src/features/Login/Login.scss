@@ -1,0 +1,43 @@
+.Login {
+  @apply w-full h-full flex flex-col items-center justify-center gap-6 p-4;
+  @apply min-h-screen min-w-full;
+  .guest-input {
+    @apply flex flex-col gap-2;
+  }
+  .login-header {
+    @apply w-full flex items-start justify-between gap-4;
+    .header-text {
+      @apply flex flex-col gap-2;
+    }
+  }
+  .login-form {
+    @apply w-full max-w-lg;
+    .input-group {
+      @apply flex flex-col gap-6;
+      .input-field {
+        @apply grid gap-2;
+        .password-label {
+          @apply flex items-center;
+        }
+      }
+    }
+    .footer-actions {
+      @apply w-full flex flex-col gap-4;
+      .login-btn, .guest-btn {
+        @apply w-full;
+      }
+      .separator {
+        @apply w-full flex items-center justify-center;
+        @apply relative text-sm text-muted-foreground;
+        span {
+          @apply bg-background px-2;
+        }
+        &::before {
+          content: "";
+          @apply absolute left-0 right-0 top-1/2 h-px bg-border;
+          @apply -z-10;
+        }
+      }
+    }
+  }
+}

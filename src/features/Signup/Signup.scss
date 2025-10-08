@@ -1,0 +1,25 @@
+.Signup {
+  @apply w-full h-full flex flex-col items-center justify-center gap-6 p-4;
+  @apply min-h-screen min-w-full;
+  .signup-header {
+    @apply w-full flex items-start justify-between gap-4;
+    .header-text {
+      @apply flex flex-col gap-2;
+    }
+  }
+  .signup-form {
+    @apply w-full max-w-lg;
+    .input-group {
+      @apply flex flex-col gap-6;
+      .input-field {
+        @apply grid gap-2;
+        .password-label {
+          @apply flex items-center;
+        }
+      }
+    }
+    .signup-btn {
+      @apply w-full;
+    }
+  }
+}
