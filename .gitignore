@@ -41,4 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 #openapi
-/src/api/openapi
+/src/api/openapi/
