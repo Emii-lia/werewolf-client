@@ -13,6 +13,7 @@ import { LogOut, User } from "lucide-react";
 import useTopbar from "./useTopbar";
 import "./Topbar.scss";
 import { CSSProperties } from "react";
+import Link from "next/link";
 
 const Topbar = () => {
   const { user, isGuest, handleLogout } = useTopbar();
@@ -20,7 +21,7 @@ const Topbar = () => {
   return (
     <div className="Topbar">
       <div className="topbar-container">
-        <div className="topbar-brand">
+        <Link className="topbar-brand" href="/">
           <div
             className="brand-logo"
             style={{
@@ -28,7 +29,7 @@ const Topbar = () => {
             } as CSSProperties}
           />
           <h1 className="brand-title">Werewolf</h1>
-        </div>
+        </Link>
         {!!user &&
           <div className="topbar-actions">
             <DropdownMenu>
