@@ -1,6 +1,4 @@
-import Image from "next/image";
-import styles from "./page.module.css";
-import Link from "next/dist/client/link";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 
