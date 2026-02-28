@@ -27,6 +27,12 @@ const useTopbar = () => {
     }
   }, [token]);
 
+  useEffect(() => {
+    if (!token && protectedRoutes.some(p => pathname.startsWith(p))) {
+      router.push("/login");
+    }
+  }, [token]);
+
   return {
     user,
     isGuest,
