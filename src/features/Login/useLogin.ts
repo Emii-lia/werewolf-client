@@ -52,8 +52,8 @@ const useLogin = () => {
           if (data.token && data.user) {
             setAuth(data.user, data.token);
             toast.success("Login successful!");
+            router.push("/menu");
           }
-          router.push("/menu");
         },
         onError: (error: any) => {
           if (error.response?.data?.detail) {
