@@ -19,9 +19,7 @@
     }
   }
   &__footer {
-    .HTSection__container {
-      @apply max-w-2xl flex flex-col items-center gap-6;
-    }
+    @apply max-w-2xl flex flex-col items-center gap-6;
   }
   &__content {
     @apply flex flex-col gap-12;

@@ -11,8 +11,8 @@ const HTSection = ({
   className
 }: Props) => {
   return (
-    <div className={cn("HTSection", className)}>
-      <div className="HTSection__container">
+    <div className="HTSection">
+      <div className={cn("HTSection__container", className)}>
         {children}
       </div>
     </div>
