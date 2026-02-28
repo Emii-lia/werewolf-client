@@ -1,0 +1,93 @@
+.HowToPlay {
+  @apply w-full min-h-screen bg-background text-foreground;
+  &__header, &__footer {
+    @apply flex flex-col gap-6;
+    .ht-header-title {
+      @apply text-5xl lg:text-6xl font-bold text-balance leading-tight;
+    }
+    .ht-footer-title {
+      @apply text-4xl lg:text-5xl font-bold mb-6 text-balance;
+    }
+    .ht-header-description {
+      @apply text-xl text-muted-foreground leading-relaxed;
+    }
+    .ht-footer-description {
+      @apply text-lg text-muted-foreground leading-relaxed text-center;
+    }
+    .ht-footer-buttons {
+      @apply flex flex-col sm:flex-row gap-4 justify-center;
+    }
+  }
+  &__footer {
+    @apply max-w-2xl flex flex-col items-center gap-6;
+  }
+  &__content {
+    @apply flex flex-col gap-12;
+    .ht-content-title {
+      @apply text-3xl lg:text-4xl font-bold mb-8;
+    }
+    .ht-overview-card {
+      @apply p-8 border-2 border-border flex flex-col gap-6;
+      .hto-text {
+        @apply text-lg text-muted-foreground leading-relaxed;
+      }
+    }
+    .ht-clans {
+      @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+      .ht-clan-card {
+        @apply p-8 border-2 border-border flex flex-col gap-4;
+        .ht-clan-title {
+          @apply text-2xl font-bold;
+        }
+        .ht-clan-content {
+          @apply flex flex-col gap-4 text-muted-foreground;
+          .ht-clan-win {
+            @apply bg-background/50 p-4 rounded-lg flex flex-col gap-2;
+            .ht-win-label {
+              @apply font-semibold text-foreground;
+            }
+          }
+        }
+      }
+    }
+    .ht-phases {
+      @apply flex flex-col gap-6;
+      .ht-phase-card {
+        @apply p-8 border-2 border-border flex flex-col gap-4;
+        .ht-phase-title {
+          @apply text-2xl font-bold;
+        }
+        .ht-phase-content {
+          @apply text-muted-foreground flex flex-col gap-3;
+        }
+      }
+    }
+    .ht-win-conditions {
+      @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+      .ht-win-card {
+        @apply p-8 border-2 border-border flex flex-col gap-4;
+        .ht-win-title {
+          @apply text-xl font-bold;
+        }
+        .ht-win-list {
+          @apply flex flex-col gap-3 text-muted-foreground;
+          .ht-win-item {
+            @apply flex items-start gap-3;
+          }
+        }
+      }
+    }
+    .ht-tips-list {
+      @apply grid grid-cols-1 md:grid-cols-2 gap-8;
+      .ht-tip-card {
+        @apply p-6 border-2 border-border flex flex-col gap-2;
+        .ht-tip-title {
+          @apply font-bold;
+        }
+        .ht-tip-description {
+          @apply text-muted-foreground text-sm;
+        }
+      }
+    }
+  }
+}
