@@ -7,7 +7,7 @@ import { protectedRoutes } from "@/commons/routes";
 const useTopbar = () => {
   const router = useRouter();
   const pathname = usePathname()
-  const { user, isGuest, logout, token } = useAuthStore();
+  const { user, isGuest, logout, token, isAuthenticated } = useAuthStore();
 
   const handleLogout = () => {
     logout();
@@ -28,10 +28,10 @@ const useTopbar = () => {
   }, [token]);
 
   useEffect(() => {
-    if (!token && protectedRoutes.some(p => pathname.startsWith(p))) {
+    if (!isAuthenticated && protectedRoutes.some(p => pathname.startsWith(p))) {
       router.push("/login");
     }
-  }, [token]);
+  }, [isAuthenticated, pathname]);
 
   return {
     user,
