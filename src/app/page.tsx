@@ -15,7 +15,7 @@ export default function Home() {
             Experience thrilling gameplay with strategy, deception, and teamwork. Host your own game or join exciting matches with players worldwide.
           </p>
 
-          <Link href="/login">
+          <Link href="/menu">
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-7 rounded-lg">
               Start Playing Now
             </Button>
@@ -111,7 +111,7 @@ export default function Home() {
           <p className="text-lg text-muted-foreground mb-8">
             Join thousands of players in the ultimate werewolf adventure. Start your first game today!
           </p>
-          <Link href="/login">
+          <Link href="/menu">
             <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/80 text-lg px-12 py-6 rounded-full">
               Get Started Now
             </Button>
