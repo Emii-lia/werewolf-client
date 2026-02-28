@@ -22,6 +22,12 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      <section className="px-6 lg:px-12 py-16 text-center border-b border-border">
+        <p className="text-muted-foreground mb-3">New to the game?</p>
+        <Link href="/how-to" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-semibold transition-colors">
+          Learn How to Play →
+        </Link>
+      </section>
 
       <section className="px-6 lg:px-12 py-16 lg:py-24 bg-muted/30">
         <div className="max-w-6xl mx-auto">
