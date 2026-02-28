@@ -4,11 +4,4 @@ const protectedRoutes = [
   "/roles",
 ]
 
-const publicRoutes = [
-  "/",
-  "/login",
-  "/signup",
-  "/how-to"
-]
-
-export { protectedRoutes, publicRoutes };
+export { protectedRoutes };

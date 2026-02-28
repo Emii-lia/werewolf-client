@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { protectedRoutes, publicRoutes } from "@/commons/routes";
+import { protectedRoutes } from "@/commons/routes";
 
 export default function proxy(req: NextRequest) {
   const { cookies, nextUrl } = req;
