@@ -8,6 +8,7 @@ import useMenu from "@/features/Menu/useMenu";
 import "./Menu.scss"
 import JoiRoomModal from "@/features/JoiRoomModal";
 import { useRouter } from "next/navigation";
+import Slider from "@/components/Slider";
 
 const Menu = () => {
   const router = useRouter()
@@ -18,9 +19,11 @@ const Menu = () => {
 
   const {
     roomName,
+    maxPlayers,
     hostGame,
+    toCatalog,
     handleInputChange,
-    toCatalog
+    handleMaxPlayersChange,
   } = useMenu()
 
   return (
@@ -40,7 +43,7 @@ const Menu = () => {
           }
         >
           <div className="room-form">
-            <div className="room-name-field">
+            <div className="room-field">
               <Label htmlFor="name-1">Name</Label>
               <Input
                 id="name-1"
@@ -49,6 +52,17 @@ const Menu = () => {
                 onInput={handleInputChange}
                 value={roomName}
               />
+
+            </div>
+            <div className="room-field">
+              <Label htmlFor="name-1">Max Players</Label>
+              <div className="room-slider">
+                <Slider
+                  value={maxPlayers}
+                  onChange={handleMaxPlayersChange}
+                  showValue
+                />
+              </div>
             </div>
           </div>
         </Modal>
