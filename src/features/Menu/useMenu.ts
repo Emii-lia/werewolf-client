@@ -6,6 +6,7 @@ import useGameStore from "@/stores/room";
 const useMenu = () => {
   const router  = useRouter()
   const [roomName, setRoomName] = useState("")
+  const [maxPlayers, setMaxPlayers] = useState<number>(10)
   const [roomCreated, setRoomCreated] = useState(false)
 
   const sendMessage = useSendMessage()
@@ -16,9 +17,13 @@ const useMenu = () => {
     setRoomName(event.currentTarget.value)
   }
 
+  const handleMaxPlayersChange = (value: number) => {
+    setMaxPlayers(value)
+  }
+
   const hostGame = () => {
     if (roomName.trim() === "") return
-    sendMessage({ type: "CreateRoom", room_name: roomName })
+    sendMessage({ type: "CreateRoom", room_name: roomName, max_players: maxPlayers })
     setRoomName("")
     setRoomCreated(true)
   }
@@ -35,10 +40,12 @@ const useMenu = () => {
 
   return {
     roomName,
-    handleInputChange,
+    roomCreated,
+    maxPlayers,
     hostGame,
     toCatalog,
-    roomCreated
+    handleInputChange,
+    handleMaxPlayersChange,
   }
 }
 

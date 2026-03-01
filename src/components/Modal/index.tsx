@@ -56,7 +56,7 @@ const  Modal = ({
           }
         </DialogHeader>
         {children}
-        <DialogFooter>
+        <DialogFooter className="gap-3">
           <DialogClose asChild>
             <Button variant="outline">Cancel</Button>
           </DialogClose>

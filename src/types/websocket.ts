@@ -5,11 +5,11 @@ export type PlayerWithRole = PlayerDetails & {
 };
 
 export type ClientMessage =
-  | { type: 'CreateRoom'; room_name: string }
+  | { type: 'CreateRoom'; room_name: string; max_players: number }
   | { type: 'JoinRoom'; room_id: string }
   | { type: 'LeaveRoom'; room_id: string }
   | { type: 'ToggleReady'; room_id: string }
-  | {type: 'GetRoomState'; room_id: string}
+  | { type: 'GetRoomState'; room_id: string }
   | { type: 'SendMessage'; room_id: string; message: string }
   | { type: 'StartGame'; room_id: string }
   | { type: 'RemovePlayer'; room_id: string; user_id: string }

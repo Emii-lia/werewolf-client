@@ -1,14 +1,14 @@
+.room-form {
+  @apply w-full flex flex-col gap-6;
+  .room-field {
+    @apply flex flex-col gap-4;
+  }
+}
 .Menu {
   @apply w-full h-full min-w-full min-h-screen;
   @apply flex items-center justify-center;
   .menu-content {
-    @apply flex flex-col gap-6 w-full max-w-sm p-4;
-    .room-form {
-      @apply w-full;
-      .room-name-field {
-        @apply flex flex-col gap-4;
-      }
-    }
+    @apply flex flex-col gap-6 w-full max-w-md h-fit p-4;
     .menu-button {
       @apply w-full;
     }
